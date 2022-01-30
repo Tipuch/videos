@@ -122,3 +122,7 @@ STATIC_URL = 'static/'
 # https://docs.djangoproject.com/en/4.0/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+SUPPORTED_FILE_EXT = ["mp4", "mkv", "wav"]
+DEFAULT_VIDEO_ENCODER = "h264"
+DEFAULT_AUDIO_ENCODER = "aac"

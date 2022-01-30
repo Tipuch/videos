@@ -4,7 +4,10 @@
 	import { Dropzone } from "dropzone";
 	import { patchXML } from "../../components/csrf.svelte";
 	onMount(() => {
-		const dropzone = new Dropzone("#my-form");
+		const dropzone = new Dropzone("#upload-form", {
+			maxFilesize: 2048,
+			addRemoveLinks: true,
+		});
     });
 	patchXML();
 	export let name;
@@ -13,7 +16,7 @@
 <main>
 	<h1>Hello {name}!</h1>
 	<p>Visit the <a href="https://svelte.dev/tutorial">Svelte tutorial</a> to learn how to build Svelte apps.</p>
-	<form class="dropzone" id="my-form" action="/videos/" method="post"></form>
+	<form class="dropzone" id="upload-form" action="/videos/" method="post"></form>
 </main>
 
 <style>
