@@ -7,6 +7,7 @@ from processing.models import Video
 
 
 class UploadFile(View):
+
     def get(self, request):
         return render(request, 'upload_file.html', {})
 
